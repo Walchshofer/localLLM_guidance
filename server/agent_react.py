@@ -58,7 +58,7 @@ Observation: {{do_tool tool_name actInput}}
 Thought: {{gen 'thought' stop='\\n'}}
 {{select 'answer' options=valid_answers}}: {{gen 'fn' stop='\\n'}}"""
 
-class CustomAgentGuidance:
+class CustomAgentGuidanceReAct:
     def __init__(self, guidance, tools, num_iter=3):
         self.guidance = guidance
         self.tools = tools
@@ -66,6 +66,8 @@ class CustomAgentGuidance:
 
     def do_tool(self, tool_name, actInput):
         return self.tools[tool_name](actInput)
+
+
     
     def __call__(self, query):
         prompt_start = self.guidance(prompt_start_template)
@@ -88,3 +90,15 @@ class CustomAgentGuidance:
             prompt_mid = self.guidance(history + "{{gen 'fn' stop='\\n'}}")
             result_final = prompt_mid()
         return result_final
+
+class StandardPrompt:
+    def __init__(self, guidance, tools, num_iter=3):
+        self.guidance = guidance
+        self.tools = tools
+        self.num_iter = num_iter
+        
+    def __call__(self, query):
+        task =  self.guidance(query) 
+        final_response = task()
+        history = final_response.__str__()
+        return  history, final_response

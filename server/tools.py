@@ -1,7 +1,9 @@
-from langchain.utilities import GoogleSerperAPIWrapper
+# from langchain.utilities import GoogleSerperAPIWrapper
+from langchain.utilities import SearxSearchWrapper
 
 def load_tools():
-    search = GoogleSerperAPIWrapper()
+    # search = GoogleSerperAPIWrapper()
+    search = SearxSearchWrapper(searx_host="http://localhost:8080")
 
     def searchGoogle(key_word):        
         res = search.run(key_word)
