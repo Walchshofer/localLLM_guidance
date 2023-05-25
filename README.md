@@ -1,11 +1,8 @@
-<<<<<<< HEAD
+Fork of https://github.com/QuangBK/localLLM_guidance/
 
-
+Original readme:
 
 # Makea simple agent with Guidance and local LLMs
-=======
-# Make a simple agent with Guidance and local LLMs
->>>>>>> forked_repo/main
 The [Guidance](https://github.com/microsoft/guidance) is a tool for controlling LLM. It provides a good concept to build prompt templates. This repository shows you how to make a agent with Guidance. You can combine it with various LLMs in Huggingface. My [medium article](https://medium.com/@gartist/a-simple-agent-with-guidance-and-local-llm-c0865c97eaa9) for more explanation.
 
 UPDATE: Added gradio UI.
