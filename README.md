@@ -1,4 +1,51 @@
-Fork of https://github.com/QuangBK/localLLM_guidance/
+# Guidance Agent Eval 
+
+This is a fork of https://github.com/QuangBK/localLLM_guidance/ with added models and example agents.
+
+Standard prompt is a blank guidance prompt so you can design your own agent.
+Once you are satisified, you can create an agent file in the 'server' folder. 
+You can start by copying the UniversalMarkdown agent and adding your prompt.
+
+Generally speaking the input variables are "query" (the input box) and "resolver" (the output box) if your agent has a guidance resolver variable.
+
+How to run
+- Download the models. For now, they are hard coded in app.oy and you will need to change them to your local path.
+- Set your models home directory in app.py
+```
+MODEL_DIRECTORY = "/home/shazam"
+```
+- Run the server
+
+Optionally: Install GPTQ-for-LLaMA following the Oobabooga instructions
+https://github.com/oobabooga/text-generation-webui/blob/main/docs/GPTQ-models-(4-bit-mode).md
+At this time, they are using a forked version of GPTQ-for-LLaMA. Please pay special attention to the instructions above.
+
+
+## Run 
+
+`python3 app.py`
+
+Goto http://localhost:7860/
+
+## Example agents
+
+"StandardPrompt", "COTpromptBuilder", "COTpromptBuilder2PromptResponse", "AIDecisionMakerSimulator", "SearchToolAgentPOC", "AgentGuidanceSmartGPT", "ChatGPTAgentGuidance", "AgentGuidanceFlowGPT", "UniversalAnythingToJSON", "UniversalAnythingToMarkdown"]
+
+- StandardPrompt is a blank guidance prompt so you can design your own agent.
+- COTpromptBuilder is based on Connect multiple ChatGPT sessions w/ dynamic ChatGPT prompts https://www.youtube.com/watch?v=8PbpFxPibJM
+- COTpromptBuilder2PromptResponse is the above, but the resolver is the result.
+- AIDecisionMakerSimulator is an experimental simple agent that uses a decision tree to make a decision.  Based on Henky!! from KoboaldAI and crew. 
+- SearchToolAgentPOC is an experimental agent that uses a search tool to find the answer.  NOTE: GoogleSerp is disabled and instead I am using SearX.  It must be installed. I use the docker version. https://python.langchain.com/en/latest/reference/modules/searx_search.html?highlight=searx
+- AgentGuidanceSmartGPT is based on another youtube video by code4AI https://www.youtube.com/@code4AI
+- ChatGPTAgentGuidance is just an example of using ChatML with guidance
+- AgentGuidanceFlowGPT is an attempt to use FlowGPT Proteus
+- UniversalAnythingToJSON converts anything (!) to JSON
+- UniversalAnythingToMarkdown converts anything (including JSON) to Markdown
+
+
+
+-----
+
 
 Original readme:
 
