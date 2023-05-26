@@ -9,7 +9,7 @@ You can start by copying the UniversalMarkdown agent and adding your prompt.
 Generally speaking the input variables are "query" (the input box) and "resolver" (the output box) if your agent has a guidance resolver variable.
 
 How to run
-- Download the models. For now, they are hard coded in app.oy and you will need to change them to your local path.
+- Download the models. For now, they are hard coded in ./app.py and you will need to change them to your local path.
 - Set your models home directory in app.py
 ```
 MODEL_DIRECTORY = "/home/shazam"
