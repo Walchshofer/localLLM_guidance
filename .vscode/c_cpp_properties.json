@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/pwalch/miniconda3/envs/lgd/include/python3.10",
+                "/home/pwalch/miniconda3/envs/lgd/lib/python3.10/site-packages/nvidia/cuda_runtime/include",
+                "/home/pwalch/miniconda3/envs/lgd/lib/python3.10/site-packages/torch/include/",
+                "/home/pwalch/miniconda3/envs/lgd/lib/python3.10/site-packages/torch/include/torch/",
+                "/home/pwalch/miniconda3/envs/lgd/lib/python3.10/site-packages/torch/include/torch/csrc/",
+                "/home/pwalch/miniconda3/envs/lgd/lib/python3.10/site-packages/torch/include/torch/csrc/api/",
+                "/home/pwalch/miniconda3/envs/lgd/lib/python3.10/site-packages/torch/include/torch/csrc/api/include/"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

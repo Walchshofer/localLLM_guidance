@@ -188,8 +188,13 @@ list_outputs = [gr.Textbox(lines=5, label="Reasoning"),
 
 list_inputs = [gr.Textbox(lines=1, label="Input Text", placeholder="Enter a question here..."), 
             # gr.Textbox(lines=1, label="Handlebars", placeholder="Enter your handlebars content here...")
+<<<<<<< HEAD
             gr.inputs.Dropdown(["StandardPrompt", "COTpromptBuilder", "COTpromptBuilder2PromptResponse", "AIDecisionMakerSimulator", "SearchToolAgentPOC", "AgentGuidanceSmartGPT", "ChatGPTAgentGuidance", "AgentGuidanceFlowGPT", "UniversalAnythingToJSON", "UniversalAnythingToMarkdown"], label="Agent", default="StandardPrompt"),
             gr.inputs.Dropdown(["Manticore-13B-GPTQ", "MetalX-GPT4-X-Alpaca-30B-4bit", "Wizard Mega 13B GPTQ", "wizardLM-7B-HF", "MosaicML-MPT-7B", "MosaicML-MPT-7B-Instruct", "RWKV-4-Raven-1B5-v10", "RWKV-4-Raven-14B", "Wizard-Vicuna-13B-Uncensored-GPTQ", "MPT-7B-storywriter-4bit-128g"], label="Model", default="Wizard Mega 13B GPTQ"),
+=======
+            gr.components.Dropdown(["StandardPrompt", "COTpromptBuilder", "COTpromptBuilder2PromptResponse", "AIDecisionMakerSimulator", "SearchToolAgentPOC", "AgentGuidanceSmartGPT", "ChatGPTAgentGuidance", "AgentGuidanceFlowGPT", "UniversalAnythingToJSON", "UniversalAnythingToMarkdown"], label="Agent"),
+            gr.components.Dropdown(["Manticore-13B-GPTQ", "MetalX-GPT4-X-Alpaca-30B-4bit", "Wizard Mega 13B GPTQ", "wizardLM-7B-HF", "MosaicML-MPT-7B", "MosaicML-MPT-7B-Instruct", "RWKV-4-Raven-1B5-v10", "RWKV-4-Raven-14B", "Wizard-Vicuna-13B-Uncensored-GPTQ", "MPT-7B-storywriter-4bit-128g"], label="Model"),
+>>>>>>> 24454a3 (add guidance support and angents)
             ]
 
 demo = gr.Interface(fn=greet, 
